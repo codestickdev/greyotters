@@ -1,0 +1,171 @@
+/*  Global
+------------- */ 
+@import 'global/variables';
+@import 'global/fonts';
+
+/*  Partials
+------------- */ 
+@import 'partials/header';
+@import 'partials/footer';
+
+/*  Pages
+------------- */ 
+@import 'pages/mainpage';
+@import 'pages/client';
+
+*{
+    &::selection{
+        background-color: $green;
+        color: #000;
+    }
+}
+body{
+    &.noscroll{
+        overflow: hidden;
+    }
+    &.home{
+        background-color: #000;
+        color: #fff;
+    }
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+    outline: none;
+    transition: ease .3s;
+
+    &:hover,
+    &:visited,
+    &:focus{
+        color: #fff;
+    }
+}
+body{
+    cursor: none !important;
+}
+.customMouse{
+    width: 450px;
+    height: 450px;
+    border-radius: 100%;
+    background-color: $green;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    pointer-events: none;
+    
+    &--one{
+        mix-blend-mode: exclusion;
+        z-index: 9999998;
+    }
+    &--two{
+        mix-blend-mode: hue;
+        z-index: 9999999;
+    }
+}
+@media (max-width: 1299px){
+    .customMouse{
+        width: 300px;
+        height: 300px;
+    }
+}
+@media (max-width: 991px){
+    .customMouse{
+        display: none;
+    }
+}
+
+.container{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+@media (max-width: 575px){
+    .container{
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+}
+
+@media (min-width: 1080px){
+    .container{
+        padding-right: 80px;
+        padding-left: 80px;
+    }
+}
+
+@media (min-width: 576px){
+    .container{
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px){
+    .container{
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px){
+    .container{
+        max-width: 920px;
+    }
+}
+
+@media (min-width: 1080px){
+    .container{
+        max-width: 1080px;
+    }
+}
+
+@media (min-width: 1300px){
+    .container{
+        max-width: 1300px;
+    }
+}
+@media (min-width: 1390px){
+    .container{
+        max-width: 1390px;
+    }
+}
+
+
+.container-normal {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .container-normal {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container-normal {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container-normal {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container-normal {
+        max-width: 1140px;
+    }
+}
+@media (min-width: 1300px) {
+    .container-normal {
+        max-width: 1260px;
+    }
+}

@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'ABCNormal';
+    src: url('/wp-content/themes/greyotters/fonts/ABCNormal/ABCNormal-Normal.woff2') format('woff2');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'ABCNormal';
+    src: url('/wp-content/themes/greyotters/fonts/ABCNormal/ABCNormal-Regular.woff2') format('woff2');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'ABCNormal';
+    src: url('/wp-content/themes/greyotters/fonts/ABCNormal/ABCNormal-Medium.woff2') format('woff2');
+    font-weight: 700;
+}
+
+html,
+body{
+    font-family: 'ABCNormal';
+    font-weight: 300;
+}

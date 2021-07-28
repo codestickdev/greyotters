@@ -212,7 +212,7 @@ function contact_form_engine(){
 	$message = $_POST['message'];
 
 	if($name !== '' && $mail !== '' && $subject !== '' && $message !== ''){
-		$to = 'piotrdevv@gmail.com';
+		$to = 'hello@greyotters.com';
 		$title = '[greyotters] Message from website';
 		$content = "Imię: " . $name . "<br/>";
 		$content .= "Adres e-mail: " . $mail . "<br/>";

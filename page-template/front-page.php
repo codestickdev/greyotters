@@ -19,7 +19,7 @@ get_header(); ?>
     <div id="homeSections">
         <section class="mainHeading gosection" data-name="heading">
             <div class="mainHeading__wrap">
-                <h1><?php the_field('mainHeading_title'); ?></h1>
+                <h1><?php the_field('mainHeading_title'); ?>.</h1>
             </div>
         </section>
         <section id="about" class="mainAbout gosection" data-name="about us">

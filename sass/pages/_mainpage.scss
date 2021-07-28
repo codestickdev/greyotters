@@ -53,14 +53,12 @@
 }
 
 .mainHeading{
-    min-height: calc(100vh - 197px);
-
     &__wrap{
         min-height: inherit;
         display: flex;
         align-items: flex-start;
         padding-top: 145px;
-        padding-bottom: 120px;
+        padding-bottom: 200px;
 
         h1{
             font-size: 260px;
@@ -85,8 +83,6 @@
         min-height: 0;
 
         &__wrap{
-            padding-bottom: 0;
-
             h1{
                 font-size: 185px;
             }
@@ -118,7 +114,7 @@
     .mainHeading{
         &__wrap{
             padding-top: 40px;
-            padding-bottom: 70px;
+            padding-bottom: 1rem;
 
             h1{
                 font-size: 18vw;
@@ -527,10 +523,7 @@
         flex-wrap: wrap;
     }
     &__item{
-        width: fit-content;
-        width: -moz-max-content;
-        width: -webkit-fit-content;
-        min-width: 250px;
+        width: calc(100% / 4);
         height: 80px;
         display: flex;
         align-items: flex-end;
@@ -585,8 +578,7 @@
         }
         &__item{
             min-width: 0;
-            max-width: 210px;
-            max-height: 70px;
+            max-height: 50px;
             margin-bottom: 40px !important;
         }
     }
@@ -615,8 +607,9 @@
             justify-content: flex-start;
         }
         &__item{
+            width: calc(100% / 2);
             max-width: 190px;
-            max-height: 65px;
+            max-height: 45px;
         }
     }
 }
@@ -625,7 +618,7 @@
         padding: 50px 0 60px;
 
         &__heading{
-            margin: 0 0 15px;
+            margin: 0 0 30px;
 
             h2{
                 font-size: 22px;
@@ -641,13 +634,29 @@
                 }
             }
         }
+        &__list{
+            max-width: 300px;
+        }
         &__item{
-            max-width: 120px;
-            max-height: 55px;
-            margin-bottom: 20px !important;
+            width: calc(100% / 2);
+            max-height: 38px;
+            margin-bottom: 30px !important;
 
             img{
                 max-width: calc(100% - 20px);
+            }
+        }
+    }
+}
+@media (max-width: 360px){
+    .mainClients{
+        &__heading{
+            .info{
+                span{
+                    font-size: 10px;
+                    line-height: 29px;
+                    white-space: nowrap;
+                }
             }
         }
     }

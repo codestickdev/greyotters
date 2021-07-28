@@ -68,9 +68,9 @@ get_header(); ?>
                 <div class="mainClients__list">
                     <?php foreach( $clientList as $post ): 
                     setup_postdata($post); ?>
-                        <div class="mainClients__item" data-client="<?php echo $post->post_name; ?>">
+                        <a href="<?php the_permalink(); ?>" class="mainClients__item">
                             <img src="<?php the_field('client_logo'); ?>"/>
-                        </div>
+                        </a>
                     <?php endforeach; ?>
                 </div>
             </div>

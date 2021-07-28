@@ -1,3 +1,13 @@
+function GetURLParameter(sParam){
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++){
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam){
+            return sParameterName[1];
+        }
+    }
+}   
 function scrollNav(){
     $('.gosection').each(function(){
         var nav = parseInt($('.scrollNav').offset().top) + 100;
@@ -62,6 +72,17 @@ $(document).ready(function (){
         var href = $(this).attr('href');
         scrollToAnchor(href);
     })
+});
+
+// Section parameter read
+$(document).ready(function(){
+    var section = GetURLParameter('section');
+
+    if(typeof section !== 'undefined'){
+        setTimeout(function(){
+            scrollToAnchor(section);
+        }, 300);
+    }
 });
 
 
@@ -143,25 +164,6 @@ $(document).ready(function (){
             $('.clientWrap').addClass('clientWrap--active');
         }, 500);
     });
-
-    $('.clientWrap__nav p').on('click', function (){
-        var href = $(this).attr('data-href');
-
-        $('body').removeClass('noscroll');
-
-        if(href == 'back'){
-            $('.clientWrap').removeClass('clientWrap--active');
-            setTimeout(function(){
-                $('.clientWrap').removeClass('clientWrap--ready');
-            }, 500);
-        }else{
-            scrollToAnchor(href);
-            $('.clientWrap').removeClass('clientWrap--active');
-            setTimeout(function(){
-                $('.clientWrap').removeClass('clientWrap--ready');
-            }, 500);
-        }
-    });
 });
 
 // Custom mouse
@@ -169,8 +171,8 @@ $(document).ready(function (){
     if($(window).width() > 992){
         $(document).bind('mousemove', function(e){
             $('.customMouse').css({
-                top: e.pageY - $(".customMouse").height() / 2, // just minus by half the height
-                left: e.pageX - $(".customMouse").width() / 2 // just minus by half the width
+                top: e.pageY - $(".customMouse").height() / 2,
+                left: e.pageX - $(".customMouse").width() / 2
             });
         });
     }

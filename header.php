@@ -25,6 +25,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'greyotters' ); ?></a>
 
+	<?php if ('page' == get_post_type()): ?>
 	<header id="masthead" class="siteHeader">
 		<div class="siteHeader__wrap container">
 			<div class="siteHeader__logo">
@@ -74,3 +75,4 @@
 			</div>
 		</div>
 	</header><!-- #masthead -->
+	<?php endif; ?>

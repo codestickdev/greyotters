@@ -68,9 +68,15 @@ get_header(); ?>
                 <div class="mainClients__list">
                     <?php foreach( $clientList as $post ): 
                     setup_postdata($post); ?>
-                        <a href="<?php the_permalink(); ?>" class="mainClients__item">
-                            <img src="<?php the_field('client_logo'); ?>"/>
-                        </a>
+                        <?php if(get_field('client_active')): ?>
+                            <a href="<?php the_permalink(); ?>" class="mainClients__item">
+                                <img src="<?php the_field('client_logo'); ?>"/>
+                            </a>
+                        <?php else: ?>
+                            <div class="mainClients__item">
+                                <img src="<?php the_field('client_logo'); ?>"/>
+                            </div>
+                        <?php endif; ?>
                     <?php endforeach; ?>
                 </div>
             </div>
@@ -85,7 +91,7 @@ get_header(); ?>
                 </div>
                 <div class="mainContact__form">
                     <div class="info">
-                        <p><?php _e('We will be more then happy to talk with you about how we can help. Please contact us by e-mail or by using the contact form.', 'greyotters'); ?></p>
+                        <p><?php the_field('mainContact_content'); ?></p>
                         <a href="mailto:hello@greyotters.com" class="info__mail"><span>hello@greyotters.com</span></a>
                         <div class="info__social">
                             <a href="#" target="_blank">

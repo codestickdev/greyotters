@@ -898,19 +898,23 @@ body {
   flex-wrap: wrap;
 }
 
+.mainClients__list a {
+  cursor: pointer;
+  transition: ease .5s;
+}
+
+.mainClients__list a:hover {
+  opacity: .5;
+}
+
 .mainClients__item {
   width: calc(100% / 4);
   height: 80px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  cursor: pointer;
   user-select: none;
-  transition: ease .5s;
-}
-
-.mainClients__item:hover {
-  opacity: .5;
+  outline: none;
 }
 
 .mainClients__item:nth-child(-n+4) {

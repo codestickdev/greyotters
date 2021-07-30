@@ -521,6 +521,15 @@
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
+
+        a{
+            cursor: pointer;
+            transition: ease .5s;
+
+            &:hover{
+                opacity: .5;
+            }
+        }
     }
     &__item{
         width: calc(100% / 4);
@@ -528,13 +537,8 @@
         display: flex;
         align-items: flex-end;
         justify-content: center;
-        cursor: pointer;
         user-select: none;
-        transition: ease .5s;
-
-        &:hover{
-            opacity: .5;
-        }
+        outline: none;
 
         &:nth-child(-n+4){
             margin-bottom: 80px;

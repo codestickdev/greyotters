@@ -1866,6 +1866,17 @@ body {
   z-index: 9999999;
 }
 
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    .customMouse {
+      background-color: #e5fb94;
+    }
+    .customMouse--two {
+      mix-blend-mode: color-burn;
+    }
+  }
+}
+
 @media (max-width: 1299px) {
   .customMouse {
     width: 300px;

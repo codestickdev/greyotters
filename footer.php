@@ -19,6 +19,8 @@
             <a href="#top">
 			    <img src="<?php echo get_template_directory_uri() . '/images/logo.svg'; ?>"/>
 			</a>
+            <script type="text/javascript" src="https://widget.clutch.co/static/js/widget.js"></script>
+            <div class="clutch-widget" data-url="https://widget.clutch.co" data-widget-type="1" data-expandifr="true" data-height="38" data-snippets="true" data-clutchcompany-domain="greyotters.com" data-primary-color="#FFFFFF"></div>
         </div>
         <div class="siteFooter__social">
             <a href="#" target="_blank">

@@ -731,10 +731,11 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                width: 330px;
+                width: 300px;
 
                 a{
-                    max-width: 52px;
+                    display: flex;
+                    max-width: 38px;
                     user-select: none;
                     
                     &:hover{
@@ -743,6 +744,10 @@
                 }
                 .clutch-widget{
                     width: 200px;
+
+                    iframe{
+                        filter: grayscale(1) brightness(6) !important;
+                    }
                 }
             }
             &__logo{

@@ -177,3 +177,12 @@ $(document).ready(function (){
         });
     }
 });
+
+// Clutch widget
+var clutch = $('.clutch-widget').find('iframe');
+$(clutch).on('load', function(){
+    console.log('loaded');
+    let head = $(clutch).contents().find('head');
+    let css = '<style>.logotype{filter: invert(1) grayscale(1) brightness(3);}</style>';
+    $(head).append(css);
+});

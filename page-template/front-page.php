@@ -101,7 +101,7 @@ get_header(); ?>
                                 <img src="<?php echo get_template_directory_uri() . '/images/icons/facebook_white_ico.svg'; ?>"/>
                             </a>
                             <script type="text/javascript" src="https://widget.clutch.co/static/js/widget.js"></script>
-                            <div class="clutch-widget" data-url="https://widget.clutch.co" data-widget-type="1" data-expandifr="true" data-height="38" data-snippets="true" data-clutchcompany-domain="greyotters.com" data-primary-color="#FFFFFF"></div>
+                            <div class="clutch-widget" data-url="https://widget.clutch.co" data-widget-type="1" data-expandifr="true" data-height="38" data-snippets="true" data-clutchcompany-domain="greyotters.com" data-header-color="#ffffff" data-header-text-color="#ffffff" data-footer-color="#ffffff" data-footer-text-color="#ffffff" data-primary-color="#ffffff" data-secondary-color="#ffffff" data-background-color="#ffffff" data-review-card-color="#ffffff"></div>
                         </div>
                         <div class="info__logo">
                             <img src="<?php echo get_template_directory_uri() . '/images/logo.svg' ?>"/>

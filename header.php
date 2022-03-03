@@ -20,6 +20,8 @@
 	<?php wp_head(); ?>
 </head>
 
+<?php $temp = true; ?>
+
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
@@ -42,14 +44,16 @@
 				</nav>
 			</div>
 			<div class="siteHeader__actions">
+				<?php if($temp == false): ?>
 				<div class="langSwitcher none">
 					<?php do_action('wpml_add_language_selector'); ?>
 				</div>
+				<?php endif; ?>
 				<div class="social">
-					<a href="" target="_blank" class="social__item">
+					<a href="https://www.linkedin.com/company/greyotters" target="_blank" class="social__item">
 						<img src="<?php echo get_template_directory_uri() . '/images/icons/linkedin_ico.svg'; ?>"/>
 					</a>
-					<a href="" target="_blank" class="social__item">
+					<a href="https://www.facebook.com/greyotters" target="_blank" class="social__item">
 						<img src="<?php echo get_template_directory_uri() . '/images/icons/facebook_ico.svg'; ?>"/>
 					</a>
 				</div>

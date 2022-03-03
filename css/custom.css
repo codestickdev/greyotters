@@ -96,7 +96,7 @@ body {
 .siteHeader__actions {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   height: 30px;
   max-width: 232px;
   width: 100%;
@@ -921,10 +921,11 @@ body {
   justify-content: center;
   user-select: none;
   outline: none;
+  margin-bottom: 80px;
 }
 
-.mainClients__item:nth-child(-n+4) {
-  margin-bottom: 80px;
+.mainClients__item:nth-last-child(-n+4) {
+  margin-bottom: 0;
 }
 
 .mainClients__item img {

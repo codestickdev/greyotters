@@ -2,7 +2,9 @@
 /*
  *  Template name: Main page
  */
-get_header(); ?>
+get_header(); 
+
+$temp = true; ?>
 
 <main class="greyotters greyotters--main container">
     <div class="scrollNav scrollNav--hidden">
@@ -63,7 +65,9 @@ get_header(); ?>
             <div class="mainClients__wrap">
                 <div class="mainClients__heading">
                     <h2><?php the_field('mainClients_heading'); ?></h2>
+                    <?php if($temp == false): ?>
                     <p class="info"><span><?php _e('click on the logo to see case study', 'greyotters'); ?></span></p>
+                    <?php endif; ?>
                 </div>
                 <div class="mainClients__list">
                     <?php foreach( $clientList as $post ): 
@@ -94,10 +98,10 @@ get_header(); ?>
                         <p><?php the_field('mainContact_content'); ?></p>
                         <a href="mailto:hello@greyotters.com" class="info__mail"><span>hello@greyotters.com</span></a>
                         <div class="info__social">
-                            <a href="#" target="_blank">
+                            <a href="https://www.linkedin.com/company/greyotters" target="_blank">
                                 <img src="<?php echo get_template_directory_uri() . '/images/icons/linkedin_white_ico.svg'; ?>"/>
                             </a>
-                            <a href="#" target="_blank">
+                            <a href="https://www.facebook.com/greyotters" target="_blank">
                                 <img src="<?php echo get_template_directory_uri() . '/images/icons/facebook_white_ico.svg'; ?>"/>
                             </a>
                             <script type="text/javascript" src="https://widget.clutch.co/static/js/widget.js"></script>

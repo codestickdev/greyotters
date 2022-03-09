@@ -1836,6 +1836,11 @@ body {
   color: #000;
 }
 
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
 body.noscroll {
   overflow: hidden;
 }

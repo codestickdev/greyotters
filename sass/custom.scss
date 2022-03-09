@@ -20,6 +20,9 @@
     }
 }
 body{
+    overflow-x: hidden;
+    overflow-y: scroll;
+
     &.noscroll{
         overflow: hidden;
     }

@@ -535,15 +535,11 @@
         width: calc(100% / 4);
         height: 80px;
         display: flex;
-        align-items: flex-end;
+        align-items: center;
         justify-content: center;
         user-select: none;
         outline: none;
         margin-bottom: 80px;
-
-        &:nth-last-child(-n+4){
-            margin-bottom: 0;
-        }
 
         img{
             object-fit: contain;

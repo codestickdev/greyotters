@@ -151,20 +151,20 @@ $(document).ready(function(){
 });
 
 // Client list
-$(document).ready(function (){
-    $('.mainClients__item').on('click', function(){
-        var client = $(this).attr('data-client');
+// $(document).ready(function (){
+//     $('.mainClients__item').on('click', function(){
+//         var client = $(this).attr('data-client');
 
-        $('body').addClass('noscroll');
-        $('.clientPage').removeClass('clientPage--active');
-        $('.clientPage[data-client="' + client + '"]').addClass('clientPage--active');
+//         $('body').addClass('noscroll');
+//         $('.clientPage').removeClass('clientPage--active');
+//         $('.clientPage[data-client="' + client + '"]').addClass('clientPage--active');
 
-        $('.clientWrap').addClass('clientWrap--ready');
-        setTimeout(function(){
-            $('.clientWrap').addClass('clientWrap--active');
-        }, 500);
-    });
-});
+//         $('.clientWrap').addClass('clientWrap--ready');
+//         setTimeout(function(){
+//             $('.clientWrap').addClass('clientWrap--active');
+//         }, 500);
+//     });
+// });
 
 // Custom mouse
 $(document).ready(function (){
